@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-
   render() {
     const nestedArray = [["one", "two", ["three"]], "four"];
+
+    function RecursiveFlat(nestedArray) {
+    return nestedArray.reduce(
+      (acc, val) =>
+        Array.isArray(val) ? acc.concat(RecursiveFlat(val)) : acc.concat(val),
+      []
+    );
+  }
     return (
       <div className="App">
         <p>
@@ -15,12 +22,13 @@ class App extends Component {
         </p>
 
         <p>
-          Original Nested array:<span id="nestedArray"> {JSON.stringify(nestedArray)} </span>
+          Original Nested array:
+          <span id="nestedArray"> {JSON.stringify(nestedArray)} </span>
         </p>
 
         <p>
           Converted nested array into flat array:
-          <span id="flatArray"></span>
+          <span id="flatArray">{JSON.stringify(RecursiveFlat(nestedArray))}</span>
         </p>
       </div>
     );
