@@ -15,7 +15,7 @@ class App extends Component {
         </p>
 
         <p>
-          Original Nested array:<span id="nestedArray"> </span>
+          Original Nested array:<span id="nestedArray"> {JSON.stringify(nestedArray)} </span>
         </p>
 
         <p>
