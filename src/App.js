@@ -22,13 +22,15 @@ class App extends Component {
         </p>
 
         <p>
-          Original Nested array:
+          <b>Original Nested array:</b>
           <span id="nestedArray"> {JSON.stringify(nestedArray)} </span>
         </p>
 
         <p>
-          Converted nested array into flat array:
-          <span id="flatArray">{JSON.stringify(RecursiveFlat(nestedArray))}</span>
+          <b>Converted nested array into flat array:</b>
+          <span id="flatArray">
+             {JSON.stringify(RecursiveFlat(nestedArray))}
+          </span>
         </p>
       </div>
     );
