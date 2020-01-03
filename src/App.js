@@ -11,6 +11,15 @@ class App extends Component {
           (e.g., [['one','two',['three']],'four'] ->
           ['one','two','three','four'].
         </p>
+
+        <p>
+          Original Nested array:<span id="nestedArray"> </span>
+        </p>
+
+        <p>
+          Converted nested array into flat array:
+          <span id="flatArray"></span>
+        </p>
       </div>
     );
   }
